@@ -123,7 +123,7 @@ function GetLevel() {
                 datainfo.level = customerlevel[obj1.data.level - 1]
                 resolve ('done')
             } catch (e) {
-                 $cmp.notify("海底捞等级")
+                 # $cmp.notify("海底捞等级"+e.name+"‼️", JSON.stringify(e), e.message)
                 resolve('done')
             }
         })
