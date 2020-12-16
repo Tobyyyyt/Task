@@ -123,7 +123,6 @@ function GetLevel() {
                 datainfo.level = customerlevel[obj1.data.level - 1]
                 resolve ('done')
             } catch (e) {
-                $cmp.notify("海底捞等级"+e.name+"‼️", JSON.stringify(e), e.message)
                 resolve('done')
             }
         })
@@ -261,7 +260,7 @@ function Usebonus() {
 function notify() {
     return new Promise(resolve => {
         try {
-            const sub = "尊敬的" + datainfo.level + "，您共有 " + datainfo.coin + " 捞币。"
+            
             if (datainfo.success == 0) {
                 let msg1 = "连签 " + datainfo.days + " 天，今日获得 " + datainfo.bonus + " " + datainfo.bonusname + ", 共有 " + datainfo.allbonus + " " + datainfo.bonusname + "！♨️"
                 $cmp.notify("海底捞🍲 - 签到成功！🎉", sub, msg1)
